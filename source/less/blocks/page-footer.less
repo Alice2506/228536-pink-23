@@ -3,3 +3,39 @@
   outline: 3px solid rgba(123, 47, 247, 0.7);
   outline-offset: -3px;
 }
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 940px;
+  }
+}
+
+.page-footer__social {
+  display: flex;
+  justify-content: space-around;
+  width: 182px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 30px;
+}
+
+.page-footer__social a {
+  border: 2px solid @block-background;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+

@@ -2,10 +2,82 @@
   outline: 3px solid rgba(250, 9, 158, 0.7);
   outline-offset: -3px;
   background-color: @block-background;
+  position: relative;
 }
 
 .prices__mobile {
   line-height: 30px;
   color: @font-color;
   text-transform: uppercase;
+}
+
+.prices__wrapper {
+  min-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 940px;
+  }
+}
+
+.prices__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mark {
+  text-align: center;
+}
+
+.empty {
+  background-color: @block-background;
+  border: none;
+
+  @media (max-width: @tablet-width) {
+    background-color: @font-color;
+  }
+}
+
+.empty span {
+  @media (min-width: @tablet-width) {
+    color: @block-background;
+  }
+}
+
+.prices__tablet {
+  @media (max-width: @tablet-width) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.prices__mobile {
+  @media (min-width: @mobile-width) and (max-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.yes-mark::after {
+  @media (max-width: @tablet-width) {
+    content: url("../img/yes.svg");
+    position: absolute;
+    right: 15px;
+  }
+}
+
+.no-mark::after {
+  @media (max-width: @tablet-width) {
+    content: url("../img/no.svg");
+    position: absolute;
+    right: 15px;
+  }
 }
