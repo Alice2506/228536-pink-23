@@ -7,6 +7,64 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.photo-of-the-day {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.photo-of-the-day--tablet {
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.photo-of-the-day--desktop {
+  @media (max-width: @desktop-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.photos__main-photo {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .photos__note {
