@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -43,7 +44,7 @@
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
         </p>
         <form class="form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="form__name">
             <ul class="form__contacts name-list">
               <li class="name-list__item">
                 <label class="form-heading" for="field-surname">Фамилия</label>
@@ -59,7 +60,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__radio-checkbox">
+          <fieldset class="form__radio-checkbox form__achievments">
             <legend class="form-heading">Ваши безбашенные достижения в путешествии</legend>
             <ul class="achievments-list">
               <li class="achievments-list__item">
@@ -88,7 +89,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__contact-info">
+            <legend class="form-heading">Контактная информация</legend>
             <ul class="form__contacts contacts-list">
               <li class="contacts-list__item">
                 <label class="form-heading" for="phone-field">Номер телефона</label>
@@ -100,7 +102,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__radio-checkbox">
+          <fieldset class="form__radio-checkbox form__apps">
             <legend class="form-heading">С каким приложением путешествовали?</legend>
             <ul class="apps-list">
               <li class="apps-list__item">
@@ -120,8 +122,8 @@
           <fieldset class="form__textarea">
             <legend class="form-heading">Опишите свои эмоции</legend>
             <textarea class="form__text-field form-option" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            <input class="form__button" type="submit" value="Отправить форму">
           </fieldset>
+          <input class="form__button" type="submit" value="Отправить форму">
           <p>* — обязательные поля</p>
         </form>
       </div>

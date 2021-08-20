@@ -1,5 +1,16 @@
 .form {
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .form ul {
@@ -8,15 +19,85 @@
 
 .form-title {
   background: #0b0435 url("../img/back-mobile.png") no-repeat;
-  min-height: 200px;
+  min-height: 462px;
   color: #ffffff;
   background-size: cover;
+  text-align: center;
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 730px;
+    background: url("../img/back-tablet.png") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 853px;
+    background: url("../img/back-desktop.png") no-repeat;
+    background-size: cover;
+  }
 }
 
 .form-add {
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .form__radio-checkbox {
   background-color: @block-background;
+
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+  }
 }
+
+.form__achievments {
+  @media (min-width: @tablet-width) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.form__apps {
+  @media (min-width: @tablet-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.form__contact-info {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.form__textarea {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+
+
