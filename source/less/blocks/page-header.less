@@ -3,6 +3,12 @@
   outline: 3px solid rgba(154, 127, 228, 0.7);
   outline-offset: -3px;
   z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+
+.page-header--closed {
+  background-color: fade(#000000, 30%);
 }
 
 .page-header__wrapper {
@@ -23,6 +29,7 @@
   padding-top: 22px;
 
   @media (min-width: @tablet-width) {
+    height: 87px;
     min-width: 145px;
     background: url("../img/logotype-white-tablet.svg") no-repeat 20px;
   }
