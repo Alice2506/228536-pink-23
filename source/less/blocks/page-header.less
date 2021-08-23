@@ -1,14 +1,22 @@
 .page-header {
-  background-color: @font-color;
+  //background-color: @font-color;
+  background-color: fade(#000000, 30%);
   outline: 3px solid rgba(154, 127, 228, 0.7);
   outline-offset: -3px;
   z-index: 2;
   position: absolute;
   width: 100%;
+
+  @media(min-width: @desktop-width) {
+    background-color: fade(#000000, 30%);
+  }
 }
 
-.page-header--closed {
-  background-color: fade(#000000, 30%);
+.page-header--opened,
+.page-header--nojs {
+  @media(max-width: @desktop-width) {
+    background-color: @font-color;
+  }
 }
 
 .page-header__wrapper {

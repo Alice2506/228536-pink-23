@@ -26,7 +26,12 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-around;
+    height: 109px;
   }
+}
+
+.main-navigation__list li {
+  line-height: 109px;
 }
 
 .main-navigation__toggle {
@@ -111,12 +116,11 @@
 
 .main-navigation--opened .nav-list__item,
  .main-navigation--nojs .nav-list__item {
-  height: 63px;
-  line-height: 63px;
-
   @media (max-width: @desktop-width) {
     box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid #000000;
+    height: 63px;
+    line-height: 63px;
   }
 }
 
@@ -127,5 +131,7 @@
 }
 
 .main-navigation--closed .main-navigation__list {
-  display: none;
+  @media(max-width: @desktop-width) {
+    display: none;
+  }
 }
