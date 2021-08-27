@@ -2,6 +2,7 @@
   outline: 3px solid rgba(250, 174, 9, 0.7);
   outline-offset: -3px;
 }
+
 .contacts__info a,
 .adress {
   color: @icon-color;
@@ -14,6 +15,8 @@
   width: 280px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  background-size: cover;
 
   @media (max-width: @tablet-width) {
     display: flex;
@@ -58,19 +61,13 @@
   }
 }
 
-.contacts__info span {
+.contacts__info span:first-child {
   font-size: 18px;
   font-weight: 700;
   line-height: 24.51px;
 }
 
-.map {
+.contacts__background {
   width: 100%;
-
-  @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
+  position: absolute;
 }

@@ -36,9 +36,9 @@
 
 .main-navigation__toggle {
   border: none;
-  background-color: red;
+  background-color: transparent;
   position: absolute;
-  top: 20px;
+  top: -45px;
   right: 20px;
   width: 50px;
   height: 24px;
@@ -104,18 +104,8 @@
   display: none;
 }
 
-.main-navigation__toggle {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: -45px;
-  right: 20px;
-  width: 50px;
-  height: 24px;
-}
-
 .main-navigation--opened .nav-list__item,
- .main-navigation--nojs .nav-list__item {
+.main-navigation--nojs .nav-list__item {
   @media (max-width: @desktop-width) {
     box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid #000000;
@@ -131,7 +121,7 @@
 }
 
 .main-navigation--closed .main-navigation__list {
-  @media(max-width: @desktop-width) {
+  @media (max-width: @desktop-width) {
     display: none;
   }
 }
