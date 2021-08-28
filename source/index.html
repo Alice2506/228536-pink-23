@@ -12,9 +12,9 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img src="img/pink_mobile-logo.svg" alt="Pink" width="74" height="23">
+          <img class="page-header__logo-image" src="img/pink_mobile-logo.svg" alt="Pink" width="74" height="23">
         </a>
-        <nav class="main-navigation main-navigation--opened">
+        <nav class="main-navigation main-navigation--closed">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -109,11 +109,11 @@
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </div>
             </blockquote>
-            <p class="reviews__toggles slider__toggles">
+            <div class="reviews__toggles slider__toggles">
               <button class="slider__toggle slider__toggle--current" type="button"></button>
               <button class="slider__toggle" type="button"></button>
               <button class="slider__toggle" type="button"></button>
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -140,19 +140,19 @@
                   <span class="table-price">9,99 USD</span>
                 </th>
               </tr>
-              <tr>
+              <tr class="table-cells">
                 <td class="table-option prices__mobile yes-mark">Розовый фильтр</td>
                 <td class="table-option mark prices__tablet"><img src="img/yes.svg" alt="Yes" width="31" height="21"></td>
                 <td class="table-option mark prices__tablet"><img src="img/yes.svg" alt="Yes" width="31" height="21"></td>
                 <td class="table-option mark prices__tablet"><img src="img/yes.svg" alt="Yes" width="31" height="21"></td>
               </tr>
-              <tr>
+              <tr class="table-cells">
                 <td class="table-option prices__mobile yes-mark">Смайлики</td>
                 <td class="table-option mark prices__tablet"><img src="img/no.svg" alt="No" width="27" height="27"></td>
                 <td class="table-option mark prices__tablet"><img src="img/yes.svg" alt="Yes" width="31" height="21"></td>
                 <td class="table-option mark prices__tablet"><img src="img/yes.svg" alt="Yes" width="31" height="21"></td>
               </tr>
-              <tr>
+              <tr class="table-cells">
                 <td class="table-option prices__mobile no-mark">Комментарии</td>
                 <td class="table-option mark prices__tablet"><img src="img/no.svg" alt="No" width="27" height="27"></td>
                 <td class="table-option mark prices__tablet"><img src="img/no.svg" alt="No" width="27" height="27"></td>
@@ -161,8 +161,8 @@
             </table>
           </div>
           <p class="prices__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button"></button>
             <button class="slider__toggle" type="button"></button>
+            <button class="slider__toggle slider__toggle--current" type="button"></button>
             <button class="slider__toggle" type="button"></button>
           </p>
         </div>
@@ -184,6 +184,7 @@
             <span class="adress">ул. Большая Конюшенная, 19/8</span>
           </p>
         </div>
+        <img class="contacts__background" src="../img/triangle-white-footer.svg" alt="" width="320px" height="35px">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858716115232!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617480981925!5m2!1sru!2sru" width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
     </main>
@@ -195,11 +196,9 @@
           <a href="#"><img src="img/facebook.svg" alt="Facebook" width="9" height="18"></a>
           <a href="#"><img src="img/youtube.svg" alt="Youtube" width="15" height="13"></a>
         </div>
-        <div>
-          <p>
-            <span>Разработано</span>
-            <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/html-academy.svg" alt="Htmlacademy" width="27" height="34"></a>
-          </p>
+        <div class="page-footer__copyright">
+          <span>Разработано</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/html-academy.svg" alt="Htmlacademy" width="27" height="34"></a>
         </div>
       </div>
     </footer>

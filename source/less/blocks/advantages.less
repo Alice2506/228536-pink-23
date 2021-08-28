@@ -5,15 +5,19 @@
   text-align: center;
 
   @media (max-width: @tablet-width) {
-    margin-top: 250px;
+    margin-top: 290px;
   }
 }
 
 .advantages__wrapper {
-  background-color: @block-background;
+  background: url("../img/grey-background-mobile.svg") no-repeat 0 -40px;
+  background-size: cover;
   display: grid;
   min-width: 280px;
   margin: 0 auto;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media (min-width: @tablet-width) {
     grid-template-rows: auto auto;

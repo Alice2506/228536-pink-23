@@ -1,5 +1,16 @@
 .table-heading {
   background-color: @font-color;
+  height: 94px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    height: 75px;
+  }
+}
+
+.table-heading th {
+  @media (min-width: @tablet-width) {
+    border-right: 1px solid #ffffff;
+  }
 }
 
 .table-tariff {
@@ -27,9 +38,17 @@
   text-transform: uppercase;
   border: 2px solid #e5e5e5;
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
     text-transform: none;
+  }
+}
+
+.table-cells td:first-child {
+  padding-left: 20px;
+
+  @media (max-width: @tablet-width) {
+    padding-right: 20px;
   }
 }
