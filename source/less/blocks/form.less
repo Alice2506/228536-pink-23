@@ -18,57 +18,6 @@
   padding: 0;
 }
 
-.form-title {
-  background: #0b0435 url("../img/back-mobile.png") no-repeat;
-  min-height: 237px;
-  color: #ffffff;
-  background-size: cover;
-  text-align: center;
-  padding-top: 100px;
-  padding-left: 40px;
-  padding-right: 40px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 440px;
-    background: url("../img/back-tablet.png") no-repeat;
-    background-size: cover;
-    padding-top: 200px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 394px;
-    background: url("../img/back-desktop.png") no-repeat;
-    background-size: cover;
-  }
-}
-
-.form-add {
-  line-height: 30px;
-  background-color: #ffffff;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 51px;
-  padding-top: 36px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 18px;
-    padding-left: 85px;
-    padding-right: 85px;
-    padding-bottom: 82px;
-    padding-top: 100px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 222px;
-    padding-right: 222px;
-    padding-bottom: 100px;
-    padding-top: 95px;
-  }
-}
-
 .form__radio-checkbox {
   background-color: @block-background;
   border: none;
@@ -122,6 +71,10 @@
 }
 
 .form__textarea {
+  border: none;
+  margin-top: -20px;
+  text-align: center;
+
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -140,7 +93,7 @@
   height: 59px;
   min-width: 276px;
   padding-left: 20px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 1px;
 }
 
@@ -155,15 +108,6 @@
   }
 }
 
-.achievments-list__item {
-  position: relative;
-  margin-bottom: 47px;
-}
-
-.achievments-list__item label {
-  padding-left: 79px;
-}
-
 .form-heading {
   padding-top: 60px;
 }
@@ -174,8 +118,8 @@
   left: 22px;
   width: 35px;
   height: 35px;
-  border: 2px solid #E5E5E5;
-  background: #FFFFFF;
+  border: 2px solid #e5e5e5;
+  background: #ffffff;
   border-radius: 1px;
 }
 
@@ -191,19 +135,14 @@
   background-position: 0 0;
 }
 
-.apps-list__item {
-  position: relative;
-  margin-bottom: 47px;
-}
-
 .form__radio + label::before {
   content: "";
   position: absolute;
   left: 22px;
   width: 37px;
   height: 37px;
-  border: 2px solid #E5E5E5;
-  background: #FFFFFF;
+  border: 2px solid #e5e5e5;
+  background: #ffffff;
   border-radius: 50%;
 }
 
@@ -218,16 +157,6 @@
   border-radius: 50%;
 }
 
-.apps-list__item label {
-  padding-left: 90px;
-}
-
-.form__textarea {
-  border: none;
-  margin-top: -20px;
-  text-align: center;
-}
-
 .form__textarea legend {
   text-align: center;
 }
@@ -236,7 +165,7 @@
   width: 276px;
   margin: 0 auto;
   padding-top: 22px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 1px;
 }
 
