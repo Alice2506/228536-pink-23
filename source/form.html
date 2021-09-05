@@ -38,13 +38,9 @@
       </div>
     </header>
     <main class="page-main">
-      <div class="page-main__wrapper">
-        <div class="form-title">
-          <h1 class="slogan">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        </div>
-        <p class="form-add">
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-        </p>
+      <h1 class="page-main__title slogan">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p class="page-main__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <div class="page-main__wrapper form-wrapper">
         <form class="form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__name">
             <ul class="form__contacts name-list">
@@ -66,27 +62,27 @@
             <legend class="form-heading">Ваши безбашенные достижения в путешествии</legend>
             <ul class="achievments-list">
               <li class="achievments-list__item">
-                <input class="form__checkbox" type="checkbox" id="checkbox-selfie" checked>
+                <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox-selfie" checked>
                 <label class="form-option" for="checkbox-selfie">Сделал селфи с акулой</label>
               </li>
               <li class="achievments-list__item">
-                <input class="form__checkbox" type="checkbox"  id="checkbox-burn" checked>
+                <input class="form__checkbox visually-hidden" type="checkbox"  id="checkbox-burn" checked>
                 <label class="form-option" for="checkbox-burn">Обгорел на пляже</label>
               </li>
               <li class="achievments-list__item">
-                <input class="form__checkbox" type="checkbox" id="checkbox-norris">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox-norris">
                 <label class="form-option" for="checkbox-norris">Видел Чака Норриса</label>
               </li>
               <li class="achievments-list__item">
-                <input class="form__checkbox" type="checkbox" id="checkbox-souvenirs">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox-souvenirs">
                 <label class="form-option" for="checkbox-souvenirs">Накупил сувениров</label>
               </li>
               <li class="achievments-list__item">
-                <input class="form__checkbox" type="checkbox" id="checkbox-tower" checked>
+                <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox-tower" checked>
                 <label class="form-option" for="checkbox-tower">Удержал башню</label>
               </li>
               <li class="achievments-list__item">
-                <input class="form__checkbox" type="checkbox" id="checkbox-hotel">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox-hotel">
                 <label class="form-option" for="checkbox-hotel">Разгромил отель</label>
               </li>
             </ul>
@@ -108,15 +104,15 @@
             <legend class="form-heading">С каким приложением путешествовали?</legend>
             <ul class="apps-list">
               <li class="apps-list__item">
-                <input class="form__radio" type="radio" id="radio-iOS" checked>
+                <input class="form__radio visually-hidden" type="radio" id="radio-iOS" checked>
                 <label class="form-option" for="radio-iOS">Pink для iOS</label>
               </li>
               <li class="apps-list__item">
-                <input class="form__radio" type="radio" id="radio-Android">
+                <input class="form__radio visually-hidden" type="radio" id="radio-Android">
                 <label class="form-option" for="radio-Android">Pink на Android</label>
               </li>
               <li class="apps-list__item">
-                <input class="form__radio" type="radio" id="radio-WindowsPhone">
+                <input class="form__radio visually-hidden" type="radio" id="radio-WindowsPhone">
                 <label class="form-option" for="radio-WindowsPhone">Windows Phone</label>
               </li>
             </ul>
@@ -125,7 +121,7 @@
             <legend class="form-heading">Опишите свои эмоции</legend>
             <textarea class="form__text-field form-option" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
-          <input class="form__button" type="submit" value="Отправить форму">
+          <input class="form__button button" type="submit" value="Отправить форму">
           <p>* — обязательные поля</p>
         </form>
       </div>

@@ -21,13 +21,39 @@
   }
 }
 
+.photos__main-photo::before {
+  content: "Панорама дня";
+  position: absolute;
+  width: 140px;
+  height: 36px;
+  background-color: @icon-color;
+  text-align: center;
+  color: #ffffff;
+  line-height: 36px;
+  text-transform: uppercase;
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 54px;
+    right: 130px;
+  }
+}
+
 .photo-of-the-day {
+  width: 100%;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
 .photo-of-the-day--tablet {
+  width: 100%;
+
   @media (max-width: @tablet-width) {
     display: none;
   }
@@ -42,6 +68,8 @@
 }
 
 .photo-of-the-day--desktop {
+  width: 100%;
+
   @media (max-width: @desktop-width) {
     display: none;
   }
@@ -52,6 +80,8 @@
 }
 
 .photos__main-photo {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -67,13 +97,37 @@
   }
 }
 
-.photos__note {
-  margin: 0;
-  padding: 0;
+.photos__main-photo .photos__note {
+  background-color: @block-background;
+  width: 263px;
+  margin: 0 auto;
+  margin-top: -10px;
+  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 620px;
+  }
 }
 
-.photos-list__item {
+.photos__main-photo .photos__likes {
   background-color: @block-background;
+  width: 245px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: -15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 620px;
+  }
+}
+
+.photos-list__item:not(:nth-child(1)) {
+  background-color: @block-background;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .photos__author-name {
@@ -91,4 +145,34 @@
   font-size: 12px;
   text-transform: uppercase;
   color: @icon-color;
+  padding-left: 35px;
+  position: relative;
+}
+
+.photos__likes::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  background: url("../img/heart.svg") no-repeat;
+  background-position: 0 0;
+  left: 17px;
+  top: 5px;
+}
+
+.photos__main-photo-likes::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  background: url("../img/heart.svg") no-repeat;
+  background-position: 0 0;
+  left: 17px;
+  top: 17px;
+}
+
+.photos__note {
+  padding-left: 17px;
+  margin-left: 0;
+  margin-right: 0;
 }
