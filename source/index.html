@@ -12,7 +12,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/pink_mobile-logo.svg" alt="Pink" width="74" height="23">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg">
+            <img class="page-header__logo-image" src="img/pink_mobile-logo.svg" alt="Pink" width="74" height="23">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--closed">
           <button class="main-navigation__toggle" type="button">
@@ -70,9 +74,15 @@
           </div>
           <div class="advantages__wrapper">
             <div class="advantages__list advantages-list">
-              <img class="advantages-list__item image-grey" src="img/iphone-image-grey.png" alt="iphone-image" width="186" height="382">
-              <img class="advantages-list__item image-pink" src="img/iphone-image-pink.png" alt="iphone-image" width="186" height="382">
-              <img class="advantages-list__item image-smile" src="img/iphone-image-smile.png" alt="iphone-image" width="186" height="382">
+              <picture>
+                <img class="advantages-list__item image-grey" src="img/iphone-image-grey.png" srcset="img/iphone-image-grey@2x.png 2x" alt="iphone-image" width="186" height="382">
+              </picture>
+              <picture>
+                <img class="advantages-list__item image-pink" src="img/iphone-image-pink.png" srcset="img/iphone-image-pink@2x.png 2x" alt="iphone-image" width="186" height="382">
+              </picture>
+              <picture>
+                <img class="advantages-list__item image-smile" src="img/iphone-image-smile.png" srcset="img/iphone-image-smile@2x.png 2x" alt="iphone-image" width="186" height="382">
+              </picture>
               <div class="advantages-list__item image-grey-description">
                 <h3 class="link-title">Поднимает настроение</h3>
                 <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
@@ -184,7 +194,7 @@
             <span class="adress">ул. Большая Конюшенная, 19/8</span>
           </p>
         </div>
-        <img class="contacts__background" src="../img/triangle-white-footer.svg" alt="" width="320px" height="35px">
+        <div class="contacts__background"></div>
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858716115232!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617480981925!5m2!1sru!2sru" width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
     </main>

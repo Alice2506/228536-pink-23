@@ -12,7 +12,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <img src="img/pink_mobile-logo.svg" alt="Pink" width="74" height="23">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg">
+            <img class="page-header__logo-image" src="img/pink_mobile-logo.svg" alt="Pink" width="74" height="23">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--closed">
           <button class="main-navigation__toggle" type="button">
@@ -45,9 +49,15 @@
         <div class="photos__wrapper">
           <ul class="photos__list photos-list">
             <li class="photos-list__item photos__main-photo">
-              <img class="photo-of-the-day" src="img/panorama-tablet.png" alt="Фото" width="320" height="137">
-              <img class="photo-of-the-day--tablet" src="img/panorama-tablet2.png" alt="Фото" width="660" height="509">
-              <img class="photo-of-the-day--desktop" src="img/panorama-desktop.png" alt="Фото" width="1200" height="506">
+              <picture>
+                <img class="photo-of-the-day" src="img/panorama-mobile.png" srcset="img/panorama-mobile@2x.png 2x" alt="Фото" width="320" height="137">
+              </picture>
+              <picture>
+                <img class="photo-of-the-day--tablet" src="img/panorama-tablet.png" srcset="img/panorama-tablet@2x.png 2x" alt="Фото" width="660" height="509">
+              </picture>
+              <picture>
+                <img class="photo-of-the-day--desktop" src="img/panorama-desktop.png" srcset="img/panorama-desktop@2x.png 2x" alt="Фото" width="1200" height="506">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Анна <span>(5 минут назад)</span></cite>
@@ -57,7 +67,11 @@
               <p class="photos__likes photos__main-photo-likes">Нравится: 215</P>
             </li>
             <li class="photos-list__item">
-              <img src="img/photo-1-mobile.png" alt="Фото" width="280" height="180">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.png 1x, img/photo-1-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-1-tablet.png 1x, img/photo-1-tablet@2x.png 2x">
+                <img class="photos__item" src="img/photo-1-mobile.png" srcset="img/photo-1-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Левон <span>(5 часов назад)</span></cite>
@@ -67,7 +81,11 @@
               <P class="photos__likes">Нравится: 356</P>
             </li>
             <li class="photos-list__item">
-              <img src="img/photo-2-mobile.png" alt="Фото" width="280" height="180">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.png 1x, img/photo-2-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-2-tablet.png 1x, img/photo-2-tablet@2x.png 2x">
+                <img class="photos__item" src="img/photo-2-mobile.png" srcset="img/photo-2-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Антон <span>(12 часов назад)</span></cite>
@@ -77,7 +95,11 @@
               <P class="photos__likes">Нравится: 666</P>
             </li>
             <li class="photos-list__item">
-              <img src="img/photo-3-tablet.png" alt="Фото" width="280" height="180">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.png 1x, img/photo-3-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-3-tablet.png 1x, img/photo-3-tablet@2x.png 2x">
+                <img class="photos__item" src="img/photo-3-mobile.png" srcset="img/photo-3-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Борис <span>(20 часов назад)</span></cite>
@@ -87,7 +109,11 @@
               <P class="photos__likes">Нравится: 215</P>
             </li>
             <li class="photos-list__item">
-              <img src="img/photo-4-tablet.png" alt="Фото" width="280" height="180">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.png 1x, img/photo-4-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-4-tablet.png 1x, img/photo-4-tablet@2x.png 2x">
+                <img class="photos__item" src="img/photo-4-mobile.png" srcset="img/photo-4-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Сергей <span>(25 часов назад)</span></cite>
@@ -97,7 +123,11 @@
               <P class="photos__likes">Нравится: 4</P>
             </li>
             <li class="photos-list__item">
-              <img src="img/photo-5-tablet.png" alt="Фото" width="280" height="180">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.png 1x, img/photo-5-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-5-tablet.png 1x, img/photo-5-tablet@2x.png 2x">
+                <img class="photos__item" src="img/photo-5-mobile.png" srcset="img/photo-5-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Максим <span>(40 часов назад)</span></cite>
@@ -107,7 +137,11 @@
               <P class="photos__likes">Нравится: 150</P>
             </li>
             <li class="photos-list__item">
-              <img src="img/photo-6-tablet.png" alt="Фото" width="280" height="180">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.png 1x, img/photo-6-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-6-tablet.png 1x, img/photo-6-tablet@2x.png 2x">
+                <img class="photos__item" src="img/photo-6-mobile.png" srcset="img/photo-6-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+              </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
                   <cite class="photos__author-name">Надежда <span>(45 часов назад)</span></cite>
@@ -123,7 +157,10 @@
         <h2 class="visually-hidden">Загрузка своей фотографии</h2>
         <p class="catalogue__intro">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
         <div class="download-photo__wrapper">
-          <img src="img/photo-7-tablet.png" alt="Фото" width="280" height="374">
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/photo-7-tablet.png 1x, img/photo-7-tablet@2x.png 2x">
+            <img class="download-photo__item" src="img/photo-7-mobile.png" srcset="img/photo-7-mobile@2x.png 2x" alt="Фото" width="280" height="180">
+          </picture>
           <div class="download-photo__filter">
             <img src="img/crop.svg" alt="Crop" width="44" height="44">
             <img src="img/fill.svg" alt="Fill" width="48" height="43">
