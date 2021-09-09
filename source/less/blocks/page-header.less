@@ -1,5 +1,4 @@
 .page-header {
-  //background-color: @font-color;
   background-color: fade(#000000, 30%);
   outline: 3px solid rgba(154, 127, 228, 0.7);
   outline-offset: -3px;
@@ -39,18 +38,20 @@
   @media (min-width: @tablet-width) {
     height: 87px;
     min-width: 145px;
-    background: url("../img/logotype-white-tablet.svg") no-repeat 20px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 147px;
-    background-image: url("../img/logotype-white-desktop.svg");
-    background-repeat: no-repeat;
   }
 }
 
-.page-header__logo img {
+.page-header__logo-image {
   @media (min-width: @tablet-width) {
-    visibility: hidden;
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 147px;
   }
 }

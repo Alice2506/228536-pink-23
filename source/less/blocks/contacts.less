@@ -1,6 +1,7 @@
 .contacts {
   outline: 3px solid rgba(250, 174, 9, 0.7);
   outline-offset: -3px;
+  position: relative;
 }
 
 .contacts__info a,
@@ -16,6 +17,7 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
+  z-index: 2;
   background-size: cover;
 
   @media (max-width: @tablet-width) {
@@ -36,6 +38,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     min-width: 940px;
+    padding-bottom: 50px;
   }
 }
 
@@ -68,6 +71,25 @@
 }
 
 .contacts__background {
-  width: 100%;
+  width: 1200px;
+  height: 123px;
   position: absolute;
+  top: 320px;
+  background-image: url("../img/triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    background-size: cover;
+    background-position: -250px bottom;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 280px;
+    width: 1439px;
+    background-image: url("../img/triangle-white-footer_desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
 }
