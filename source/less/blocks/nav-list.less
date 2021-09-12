@@ -8,10 +8,14 @@
 }
 
 .nav-list__item--current a {
-  border-bottom: 2px solid #ffffff;
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid #ffffff;
+  }
 }
 
 .nav-list__item--current:hover a {
-  border-bottom: 2px solid @icon-color;
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @icon-color;
+  }
 }
 

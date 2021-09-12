@@ -66,6 +66,15 @@
   }
 }
 
+.main-navigation--closed .main-navigation__toggle:hover::before {
+  background-color: @icon-color;
+  box-shadow: 0 10px 0 0 @icon-color, 0 20px 0 0 @icon-color;
+}
+
+.main-navigation--closed .main-navigation__toggle:active::before {
+  opacity: 0.3;
+}
+
 .main-navigation--opened .main-navigation__toggle {
   top: -35px;
   right: 20px;
