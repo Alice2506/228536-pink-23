@@ -1,7 +1,17 @@
 .page-footer {
   color: @font-color;
-  outline: 3px solid rgba(123, 47, 247, 0.7);
-  outline-offset: -3px;
+}
+
+.page-footer__logo:active {
+  opacity: 30%;
+}
+
+.page-footer__logo:hover {
+  background: url("../img/page-footer-logo-hover.svg") no-repeat;
+}
+
+.page-footer__logo:hover svg {
+  visibility: hidden;
 }
 
 .page-footer__wrapper {
@@ -47,6 +57,18 @@
   text-align: center;
 }
 
+.page-footer__social a:hover {
+  border: 3px solid #283645;
+}
+
+.page-footer__social a:active {
+  border: 3px solid rgba(40, 54, 69, 0.1);
+}
+
+.page-footer__social a:active .page-footer__logo-link {
+  opacity: 30%;
+}
+
 .page-footer__social a:nth-child(3) {
   padding-top: 10px;
   height: 38px;
@@ -57,4 +79,16 @@
   justify-content: space-between;
   align-items: center;
   min-width: 132px;
+}
+
+.page-footer__htmlacademy-logo {
+  fill: @icon-color;
+
+  &:hover {
+    fill: @font-color;
+  }
+
+  &:active {
+    fill: fade(@font-color, 30%);
+  }
 }

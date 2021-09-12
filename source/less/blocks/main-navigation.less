@@ -15,6 +15,10 @@
 
 .main-navigation__list a {
   color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    height: 56px;
+  }
 }
 
 .main-navigation__list {
@@ -31,7 +35,9 @@
 }
 
 .main-navigation__list li {
-  line-height: 109px;
+  @media (min-width: @desktop-width) {
+    line-height: 109px;
+  }
 }
 
 .main-navigation__toggle {
