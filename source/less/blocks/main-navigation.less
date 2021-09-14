@@ -15,6 +15,10 @@
 
 .main-navigation__list a {
   color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    height: 56px;
+  }
 }
 
 .main-navigation__list {
@@ -31,7 +35,9 @@
 }
 
 .main-navigation__list li {
-  line-height: 109px;
+  @media (min-width: @desktop-width) {
+    line-height: 109px;
+  }
 }
 
 .main-navigation__toggle {
@@ -58,6 +64,15 @@
   @media (min-width: @tablet-width) {
     top: -20px;
   }
+}
+
+.main-navigation--closed .main-navigation__toggle:hover::before {
+  background-color: @icon-color;
+  box-shadow: 0 10px 0 0 @icon-color, 0 20px 0 0 @icon-color;
+}
+
+.main-navigation--closed .main-navigation__toggle:active::before {
+  opacity: 0.3;
 }
 
 .main-navigation--opened .main-navigation__toggle {

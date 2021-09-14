@@ -12,6 +12,14 @@
   border-radius: 3px;
   padding: 0;
   margin-left: 20px;
+
+  &:hover {
+    background-color: fade(@font-color, 60%);
+  }
+
+  &:active {
+    background-color: fade(@font-color, 10%);
+  }
 }
 
 .slider__toggle--current {

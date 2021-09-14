@@ -1,0 +1,21 @@
+.nav-list__item a:hover {
+  color: @icon-color;
+}
+
+.nav-list__item a:active {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.nav-list__item--current a {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid #ffffff;
+  }
+}
+
+.nav-list__item--current:hover a {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @icon-color;
+  }
+}
+

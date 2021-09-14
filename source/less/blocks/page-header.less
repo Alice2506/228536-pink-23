@@ -1,7 +1,5 @@
 .page-header {
   background-color: fade(#000000, 30%);
-  outline: 3px solid rgba(154, 127, 228, 0.7);
-  outline-offset: -3px;
   z-index: 2;
   position: absolute;
   width: 100%;
@@ -45,7 +43,7 @@
   }
 }
 
-.page-header__logo-image {
+/*.page-header__logo-image {
   @media (min-width: @tablet-width) {
     width: 145px;
     height: 40px;
@@ -53,5 +51,45 @@
 
   @media (min-width: @desktop-width) {
     width: 147px;
+  }
+}*/
+
+.page-header__logo-image,
+.page-header__logo-image-tablet,
+.page-header__logo-image-desktop {
+  fill: #ffffff;
+}
+
+.page-header__logo-image:hover,
+.page-header__logo-image-tablet:hover,
+.page-header__logo-image-desktop:hover {
+  opacity: 1;
+  fill: @icon-color;
+}
+
+.page-header__logo-image:active,
+.page-header__logo-image-tablet:active,
+.page-header__logo-image-desktop:active {
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+.page-header__logo-image {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-image-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-header__logo-image-desktop {
+  @media (max-width: @desktop-width) {
+    display: none;
   }
 }

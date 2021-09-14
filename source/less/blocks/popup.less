@@ -1,0 +1,44 @@
+.popup {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-top: 44px;
+  text-align: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    padding-top: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
+}
+
+.popup h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.popup p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.popup div {
+  @media (min-width: @desktop-width) {
+    background-color: @block-background;
+  }
+}
