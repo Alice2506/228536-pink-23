@@ -58,28 +58,3 @@
     padding-right: 20px;
   }
 }
-
-.table_ribbon-cell {
-  position: relative;
-}
-
-.table_ribbon::before {
-  content: "";
-  width: 74px;
-  height: 74px;
-  background: url("../img/hit-ribbon.svg") no-repeat;
-  z-index: 5;
-  position: absolute;
-  top: 0;
-  left: 20px;
-
-  @media (min-width: @tablet-width) {
-    left: 0;
-  }
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    width: 61px;
-    height: 61px;
-    background: url("../img/hit-ribbon-tablet.svg") no-repeat;
-  }
-}

@@ -1,3 +1,11 @@
+/*
+.photos__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}*/
+
 .photos__list {
   list-style: none;
   margin: 0;
@@ -40,38 +48,7 @@
 
 .photo-of-the-day {
   width: 100%;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.photo-of-the-day--tablet {
-  width: 100%;
-
-  @media (max-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.photo-of-the-day--desktop {
-  width: 100%;
-
-  @media (max-width: @desktop-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
-  }
+  height: auto;
 }
 
 .photos__main-photo {

@@ -40,11 +40,11 @@
   height: 59px;
 }
 
-.mark {
+.prices__mark {
   text-align: center;
 }
 
-.empty {
+.prices__empty {
   background-color: transparent;
   border: none;
 
@@ -54,7 +54,7 @@
   }
 }
 
-.empty span {
+.prices__empty span {
   @media (min-width: @tablet-width) {
     color: @block-background;
   }
@@ -66,7 +66,7 @@
   }
 }
 
-.yes-mark::after {
+.prices__yes-mark::after {
   @media (max-width: @tablet-width) {
     content: url("../img/yes.svg");
     position: absolute;
@@ -74,7 +74,7 @@
   }
 }
 
-.no-mark::after {
+.prices__no-mark::after {
   @media (max-width: @tablet-width) {
     content: url("../img/no.svg");
     position: absolute;
@@ -85,5 +85,30 @@
 .prices__wrapper .prices__toggles {
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.prices__ribbon-cell {
+  position: relative;
+}
+
+.prices__ribbon::before {
+  content: "";
+  width: 74px;
+  height: 74px;
+  background: url("../img/hit-ribbon.svg") no-repeat;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 61px;
+    height: 61px;
+    background: url("../img/hit-ribbon-tablet.svg") no-repeat;
   }
 }
