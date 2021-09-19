@@ -1,0 +1,237 @@
+// 1 Классы для реализации открытого меню в потоке без использования JS
+
+.test-header {
+  background-color: @font-color;
+
+  @media (min-width: @desktop-width) {
+    background-color: fade(#000000, 25%);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// 1.1 Отображение логотипа
+
+.test-header__logo {
+  height: 69px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    height: 109px;
+    display: block;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 83px;
+    padding-top: 27px;
+    padding-left: 130px;
+  }
+}
+
+.test-header__logo a {
+  padding-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-image-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: block;
+  }
+}
+
+.page-header__logo-image-desktop {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+// 1.2 Отображение навигации
+
+.test-navigation {
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+  min-width: 750px;
+  }
+}
+
+.test-navigation__toggle {
+  display: none;
+}
+
+.test-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    text-transform: none;
+    display: flex;
+  }
+}
+
+.test-navigation__item {
+  height: 63px;
+
+  @media (max-width: 1199px) {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000000;
+    height: 63px;
+    line-height: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 32px;
+    margin-right: 79px;
+  }
+}
+
+.test-navigation__item a {
+  color: #ffffff;
+}
+
+// 1.3 Подчеркивание активного пункта меню
+
+.current-link {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid #ffffff;
+  }
+}
+
+.current-link:hover {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @icon-color;
+  }
+}
+
+// 1.4 Поведение пунктов меню при наведении - нажатии
+
+.test-navigation__item a:hover {
+  color: @icon-color;
+}
+
+.test-navigation__item a:active {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+// 2 Классы для реализации открытого меню вне потока при использовании JS
+
+.test-header--opened {
+  background-color: @font-color;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @media (min-width: @desktop-width) {
+    background-color: fade(#000000, 25%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.test-header--opened .test-navigation {
+  @media (max-width: 1199px) {
+    position: relative;
+  }
+}
+
+.test-header--opened .test-navigation__toggle {
+  background-color: @font-color;
+  border: none;
+  display: block;
+  position: absolute;
+  top: -35px;
+  right: 20px;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 29px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @icon-color;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@icon-color, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -55px;
+  }
+}
+
+// 2 Классы для реализации закрытого меню
+
+.test-header--closed {
+  background-color: fade(#000000, 25%);
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @media(min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.test-header--closed .test-header__logo {
+  @media(min-width: @desktop-width) {
+    margin-right: 170px;
+  }
+}
+
+.test-header--closed .test-navigation__toggle {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 24px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: none;
+  padding: 0;
+  background-image: url("../img/open-menu-btn.svg");
+}
