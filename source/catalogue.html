@@ -78,13 +78,9 @@
           <ul class="photos__list photos-list">
             <li class="photos-list__item photos__main-photo">
               <picture>
+                <source media="(min-width: 1200px)" srcset="img/panorama-desktop.png 1x, img/panorama-desktop@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet.png, img/panorama-tablet@2x.png 2x">
                 <img class="photo-of-the-day" src="img/panorama-mobile.png" srcset="img/panorama-mobile@2x.png 2x" alt="Фото" width="320" height="137">
-              </picture>
-              <picture>
-                <img class="photo-of-the-day--tablet" src="img/panorama-tablet.png" srcset="img/panorama-tablet@2x.png 2x" alt="Фото" width="660" height="509">
-              </picture>
-              <picture>
-                <img class="photo-of-the-day--desktop" src="img/panorama-desktop.png" srcset="img/panorama-desktop@2x.png 2x" alt="Фото" width="1200" height="506">
               </picture>
               <blockquote class="photos__note">
                 <div class="photos__author-info">
