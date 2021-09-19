@@ -1,86 +1,78 @@
+// Классы для реализации открытого меню в потоке без использования JS, отображение навигации
+
 .main-navigation {
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+  min-width: 750px;
+  }
+}
+
+.main-navigation__toggle {
+  display: none;
+}
+
+.main-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   color: #ffffff;
   text-transform: uppercase;
-  position: relative;
 
   @media (min-width: @desktop-width) {
-    width: 80%;
-    text-transform: none;
-    font-size: 18px;
     font-weight: 400;
-  }
-}
-
-.main-navigation__list a {
-  color: #ffffff;
-
-  @media (min-width: @desktop-width) {
-    height: 56px;
-  }
-}
-
-.main-navigation__list {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  @media (min-width: @desktop-width) {
+    text-transform: none;
     display: flex;
-    justify-content: space-around;
-    height: 109px;
   }
 }
 
-.main-navigation__list li {
+.main-navigation__item {
+  height: 63px;
+
+  @media (max-width: 1199px) {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000000;
+    height: 63px;
+    line-height: 63px;
+  }
+
   @media (min-width: @desktop-width) {
-    line-height: 109px;
+    height: 32px;
+    margin-right: 79px;
   }
 }
 
-.main-navigation__toggle {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: -45px;
-  right: 20px;
-  width: 50px;
-  height: 24px;
-
-  @media (min-width: @tablet-width) {
-    top: -50px;
-  }
+.main-navigation__item a {
+  color: #ffffff;
 }
 
-.main-navigation--closed .main-navigation__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 4px;
-  border-radius: 1px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+// Поведение пунктов меню при наведении - нажатии
 
-  @media (min-width: @tablet-width) {
-    top: -20px;
-  }
+.main-navigation__item a:hover {
+  color: @icon-color;
 }
 
-.main-navigation--closed .main-navigation__toggle:hover::before {
-  background-color: @icon-color;
-  box-shadow: 0 10px 0 0 @icon-color, 0 20px 0 0 @icon-color;
-}
-
-.main-navigation--closed .main-navigation__toggle:active::before {
+.main-navigation__item a:active {
+  color: #ffffff;
   opacity: 0.3;
 }
 
-.main-navigation--opened .main-navigation__toggle {
+// Классы для реализации открытого меню вне потока при использовании JS
+
+.page-header--opened .main-navigation {
+  @media (max-width: 1199px) {
+    position: relative;
+  }
+}
+
+.page-header--opened .main-navigation__toggle {
+  background-color: @font-color;
+  border: none;
+  display: block;
+  position: absolute;
   top: -35px;
   right: 20px;
   left: auto;
@@ -120,28 +112,72 @@
   }
 }
 
-.main-navigation--nojs .main-navigation__toggle {
-  display: none;
-}
+// Классы для реализации закрытого меню
+// Отображение кнопки-гамбургера
 
-.main-navigation--opened .nav-list__item,   // полоски между пунктами меню
-.main-navigation--nojs .nav-list__item {
-  @media (max-width: @desktop-width) {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    border-bottom: 1px solid #000000;
-    height: 63px;
-    line-height: 63px;
+.page-header--closed .main-navigation__toggle {
+  display: block;
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
-.main-navigation--opened .nav-list__item:first-child {
-  @media (max-width: @desktop-width) {
-    border-top: 1px solid #000000;
-  }
+.page-header--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1px;
+  padding: 0;
 }
 
-.main-navigation--closed .main-navigation__list {
-  @media (max-width: @desktop-width) {
+.page-header--closed .main-navigation__toggle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1px;
+  padding: 0;
+}
+
+.page-header--closed .main-navigation__toggle:hover,
+.page-header--closed .main-navigation__toggle:hover::before,
+.page-header--closed .main-navigation__toggle:hover::after {
+  background-color: @icon-color;
+}
+
+.page-header--closed .main-navigation__toggle:active,
+.page-header--closed .main-navigation__toggle:active::before,
+.page-header--closed .main-navigation__toggle:active::after {
+  background-color: fade(@icon-color, 30%);
+}
+
+// Отображение навигации
+
+.page-header--closed .main-navigation__list {
+  @media (max-width: 1199px) {
     display: none;
   }
 }

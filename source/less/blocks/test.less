@@ -1,3 +1,4 @@
+/*
 // 1 Классы для реализации открытого меню в потоке без использования JS
 
 .test-header {
@@ -42,6 +43,7 @@
   }
 }
 
+
 .page-header__logo-image {
   @media (min-width: @tablet-width) {
     display: none;
@@ -61,6 +63,7 @@
     display: none;
   }
 }
+
 
 // 1.2 Отображение навигации
 
@@ -224,14 +227,73 @@
   }
 }
 
+
+// Отображение кнопки-гамбургера
+
 .test-header--closed .test-navigation__toggle {
   display: block;
   position: absolute;
+  top: 21px;
+  right: 20px;
   width: 50px;
-  height: 24px;
+  height: 4px;
   background-color: #ffffff;
   border: none;
-  border-radius: none;
+  border-radius: 1px;
   padding: 0;
-  background-image: url("../img/open-menu-btn.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
+
+.test-header--closed .test-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1px;
+  padding: 0;
+}
+
+.test-header--closed .test-navigation__toggle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 50px;
+  height: 4px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1px;
+  padding: 0;
+}
+
+.test-header--closed .test-navigation__toggle:hover,
+.test-header--closed .test-navigation__toggle:hover::before,
+.test-header--closed .test-navigation__toggle:hover::after {
+  background-color: @icon-color;
+}
+
+.test-header--closed .test-navigation__toggle:active,
+.test-header--closed .test-navigation__toggle:active::before,
+.test-header--closed .test-navigation__toggle:active::after {
+  background-color: fade(@icon-color, 30%);
+}
+
+// Отображение навигации
+
+.test-header--closed .test-navigation__list {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+*/

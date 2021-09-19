@@ -1,47 +1,45 @@
+// 1 Классы для реализации открытого меню в потоке без использования JS
+
 .page-header {
-  background-color: fade(#000000, 30%);
-  z-index: 2;
-  position: absolute;
-  width: 100%;
+  background-color: @font-color;
 
   @media (min-width: @desktop-width) {
-    background-color: fade(#000000, 30%);
-  }
-}
-
-.page-header--opened,
-.page-header--nojs {
-  @media (max-width: @desktop-width) {
-    background-color: @font-color;
-  }
-}
-
-.page-header__wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
+    background-color: fade(#000000, 25%);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
+
+// 1.1 Отображение логотипа
 
 .page-header__logo {
   cursor: pointer;
-  height: 47px;
-  padding-left: 20px;
-  padding-top: 22px;
+  height: 69px;
+  display: flex;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    height: 87px;
-    min-width: 145px;
-    padding-top: 25px;
+    height: 109px;
+    display: block;
+    padding-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 147px;
-    margin-left: 100px;
+    height: 83px;
+    padding-top: 27px;
+    padding-left: 130px;
+  }
+}
+
+.page-header__logo a {
+  padding-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
   }
 }
 
@@ -82,5 +80,41 @@
 .page-header__logo-image-desktop {
   @media (max-width: 1199px) {
     display: none;
+  }
+}
+
+// 2 Классы для реализации открытого меню вне потока при использовании JS
+
+.page-header--opened {
+  background-color: @font-color;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @media (min-width: @desktop-width) {
+    background-color: fade(#000000, 25%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// 3 Классы для реализации закрытого меню
+
+.page-header--closed {
+  background-color: fade(#000000, 25%);
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @media(min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-header--closed .page-header__logo {
+  @media(min-width: @desktop-width) {
+    margin-right: 170px;
   }
 }

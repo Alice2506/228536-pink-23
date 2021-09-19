@@ -8,6 +8,7 @@
   text-align: center;
   position: relative;
   width: 100%;
+  margin-top: -24px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hand-mobile@2x.png"), url("../img/back-mobile@2x.png");
@@ -19,6 +20,7 @@
     background: url("../img/hand-tablet.png") no-repeat bottom left,
       url("../img/back-tablet.png") no-repeat;
     background-size: auto, cover;
+    margin-top: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hand-tablet@2x.png"), url("../img/back-tablet@2x.png");
@@ -70,6 +72,12 @@
     padding-left: 74px;
     margin-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 159px;
+    padding-left: 18px;
+    padding-right: 30px;
+  }
 }
 
 .download-app a {
@@ -94,6 +102,12 @@
     display: grid;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-top: 22px;
+    width: 300px;
+  }
 }
 
 .download-app__buttons p {
@@ -109,12 +123,21 @@
     padding-right: 16px;
     padding-top: 5px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-top: 39px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .download-app__button {
   width: 280px;
   height: 55px;
   line-height: 49px;
+  font-size: 18px;
+  font-weight: 700;
   border: 3px solid #ffffff;
   box-sizing: border-box;
   border-radius: 29px;
@@ -124,6 +147,10 @@
   @media (min-width: @tablet-width) {
     width: 300px;
     margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
   }
 
   &:hover,
@@ -154,6 +181,10 @@
     justify-content: space-between;
     padding-top: 25px;
     margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 43px;
   }
 }
 
