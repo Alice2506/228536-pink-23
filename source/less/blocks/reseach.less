@@ -4,32 +4,39 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    padding-top: 0;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
     background-color: @block-background;
     padding-bottom: 67px;
+    margin-top: -50px;
   }
 }
 
 .reseach__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 280px;
-  margin: 0 auto;
-
   @media (min-width: @tablet-width) {
-    min-width: 620px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -18px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 940px;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 72px;
+    padding-left: 130px;
+    padding-right: 130px;
   }
 }
 
 .reseach__image {
-  @media (max-width: @desktop-width) {
+  @media (max-width: 1199px) {
     width: 238px;
     height: 276px;
   }
@@ -40,16 +47,33 @@
   font-weight: 700;
   line-height: 36px;
 
+  @media (min-width: @tablet-width) {
+    padding-right: 130px;
+    padding-top: 12px;
+    margin-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     line-height: 30px;
+    padding-top: 68px;
   }
 }
 
 .reseach__text p {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-right: 10px;
+    padding-top: 12px;
+    margin-bottom: 10px;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    padding-top: 24px;
+    padding-right: 20px;
+    margin-bottom: 30px;
   }
 }
 
